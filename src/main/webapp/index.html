@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+<meta charset="UTF-8">
+<title>Banking Application</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">Banking Application</a>
+        </div>
+    </div>
+</nav>
+
+Example 1: ng-hide, ng-model
+<div ng-hide="jughdfg">
+Name: <input type="text" ng-model="name"/>{{name}}
+</div>
+Hide div: <input type="checkbox" ng-model="isHidden"/>
+    
+    
+    Example 2: ng-init, ng-click
+
+    
+    
+
+
+
+    <div ng-init ="characters=[{'firstName': 'Bruce', 'secondName': 'Wayne','powerAttribute': 'Willpower'},{'firstName': 'Kara','secondName': 'Zor-El','powerAttribute': 'Kryptonian Muscles'}]">
+    <h3><span>Hero/Villain Database</span></h3>
+    <ul>
+        <li ng-repeat="character in characters">{{character}}</li>
+    </ul>
+            <div ng-init ="search=''">
+
+    Search: <input type="text" ng-model="search"/>
+    
+
+    <h3><span>Database</span></h3>
+    <table class="table">
+            <thead>
+<tr>
+    
+    <th scope="col" ng-click="fish={backgroundColor:'Blue'}">First</th>
+    <th scope="col">Last</th>
+    <th scope="col">Power</th>
+</tr>
+</thead>
+<tbody ng-style="fish">
+        <tr ng-repeat="character in characters | filter:search">
+            <td style="width:40%">{{character.firstName}}</td>
+            <td>{{character.secondName}}</td>
+            <td>{{character.powerAttribute}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<link rel="stylesheet" href="scripts/bootstrap.min.css"> 
+<script src="scripts/jquery-2.1.4.min.js"></script>
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/ui-router.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
